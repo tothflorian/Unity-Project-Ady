@@ -1,0 +1,9 @@
+# Unity generált fájlok és mappák
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+MemoryCaptures/
