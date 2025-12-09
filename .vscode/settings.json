@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Ady Project.sln"
+    "dotnet.defaultSolution": "Unity-Project-Ady.sln"
 }
