@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nobi.UiRoundedCorners", "Nobi.UiRoundedCorners.csproj", "{99E3B59F-4858-BC54-9A9F-76139DB0265D}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{DE975847-C63D-948A-A3E0-3895C672AE90}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99E3B59F-4858-BC54-9A9F-76139DB0265D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E3B59F-4858-BC54-9A9F-76139DB0265D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E3B59F-4858-BC54-9A9F-76139DB0265D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E3B59F-4858-BC54-9A9F-76139DB0265D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DE975847-C63D-948A-A3E0-3895C672AE90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DE975847-C63D-948A-A3E0-3895C672AE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE975847-C63D-948A-A3E0-3895C672AE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
