@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
@@ -30,10 +29,7 @@ public class TimeManager : MonoBehaviour
             _currentWeek++;
             gameManager.WeekPassed();
         }
-
-
-
-
+        
         // Egyéb game logic pl. animációk (talán egy check, hogy változott-e olyan, amit mutatni kell a játékosnak is)
     }
 
