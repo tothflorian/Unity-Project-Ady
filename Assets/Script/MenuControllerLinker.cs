@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MenuControllerLinker : MonoBehaviour
 {
+    public void SelectGame()
+    {
+        MenuController.Instance.SelectGame();
+    }
     public void StartGame()
     {
         MenuController.Instance.StartGame();

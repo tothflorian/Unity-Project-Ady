@@ -18,6 +18,11 @@ public class MenuController : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+    public void SelectGame()
+    {
+        SceneManager.LoadScene("GameSelector");
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene("GameScene");
