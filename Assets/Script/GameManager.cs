@@ -1,17 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    #region Game Stats
 
-    // Update is called once per frame
-    void Update()
+    private float _moneyLevel;
+    private float _moralLevel;
+    private float _reputationLevel;
+    private float _enviromentLevel;
+
+    #endregion
+
+    public void Start()
+    {
+        _moneyLevel = 50f;
+        _moralLevel = 50f;
+        _reputationLevel = 50f;
+        _enviromentLevel = 50f;
+    } 
+
+    public void WeekPassed()
     {
         
     }
