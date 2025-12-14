@@ -3,6 +3,21 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+    public static MenuController Instance { get; private set; }
+
+    private string optionsMenuOpenedFrom;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
     public void StartGame()
     {
         SceneManager.LoadScene("GameScene");
@@ -10,7 +25,18 @@ public class MenuController : MonoBehaviour
 
     public void OptionsMenu(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("OptionsMenu");
+        optionsMenuOpenedFrom = sceneName;
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene(optionsMenuOpenedFrom);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()
