@@ -72,7 +72,6 @@ public class MenuController : MonoBehaviour
 
         fade = GameObject.Find("FadePanel").GetComponent<Animator>();
 
-<<<<<<< Updated upstream
         fade.SetTrigger("Start");
     }
 
@@ -81,10 +80,4 @@ public class MenuController : MonoBehaviour
         GetComponent<AudioSource>().volume = newVolume;
     }
 
-=======
-        Debug.Log(sceneName + " " + fade);
-        fade.SetTrigger("Start");
-    }
-
->>>>>>> Stashed changes
 }
