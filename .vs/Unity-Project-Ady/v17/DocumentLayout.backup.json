@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\kriss\\OneDrive - Eotvos Lorand Tudomanyegyetem Informatikai Kar\\Dokumentumok\\Github\\Unity-Project-Ady\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kriss\\OneDrive - Eotvos Lorand Tudomanyegyetem Informatikai Kar\\Dokumentumok\\Github\\Unity-Project-Ady\\Assets\\Script\\TimeManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\TimeManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,6 +16,8 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\TutorialFinish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+=======
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kriss\\OneDrive - Eotvos Lorand Tudomanyegyetem Informatikai Kar\\Dokumentumok\\Github\\Unity-Project-Ady\\Assets\\Script\\MenuController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\MenuController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -56,6 +59,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "TimeManager.cs",
               "DocumentMoniker": "C:\\Users\\kriss\\OneDrive - Eotvos Lorand Tudomanyegyetem Informatikai Kar\\Dokumentumok\\Github\\Unity-Project-Ady\\Assets\\Script\\TimeManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TimeManager.cs",
@@ -81,6 +85,8 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+=======
+>>>>>>> Stashed changes
               "Title": "MenuController.cs",
               "DocumentMoniker": "C:\\Users\\kriss\\OneDrive - Eotvos Lorand Tudomanyegyetem Informatikai Kar\\Dokumentumok\\Github\\Unity-Project-Ady\\Assets\\Script\\MenuController.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\MenuController.cs",
@@ -88,11 +94,20 @@
               "RelativeToolTip": "Assets\\Script\\MenuController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2025-12-14T10:24:30.864Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+=======
+              "WhenOpened": "2025-12-14T10:24:30.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+>>>>>>> Stashed changes
               "Title": "TutorialButtonController.cs",
               "DocumentMoniker": "C:\\Users\\kriss\\OneDrive - Eotvos Lorand Tudomanyegyetem Informatikai Kar\\Dokumentumok\\Github\\Unity-Project-Ady\\Assets\\Script\\TutorialButtonController.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TutorialButtonController.cs",
