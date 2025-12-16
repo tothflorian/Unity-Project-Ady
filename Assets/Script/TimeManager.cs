@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
-    private GameManager gameManager;
+    [SerializeField]public GameManager _gameManager;
     private System.Random _random; 
     private int _currentDay;
     private int _currentWeek;
@@ -24,10 +24,12 @@ public class TimeManager : MonoBehaviour
         _currentDay += PassAmount();
         currentDayText.text = "Day " + _currentDay.ToString();
 
+        _gameManager.NewOccurence();
+
         if (_currentDay / 7 > _currentWeek)
         {
             _currentWeek++;
-            gameManager.WeekPassed();
+            _gameManager.WeekPassed();
         }
         
         // Egyéb game logic pl. animációk (talán egy check, hogy változott-e olyan, amit mutatni kell a játékosnak is)

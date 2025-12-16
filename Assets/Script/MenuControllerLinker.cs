@@ -32,4 +32,9 @@ public class MenuControllerLinker : MonoBehaviour
     {
         MenuController.Instance.MainMenu();
     }
+
+    public void SetVolume(float newVolume)
+    {
+        MenuController.Instance.SetVolume(newVolume);
+    }
 }

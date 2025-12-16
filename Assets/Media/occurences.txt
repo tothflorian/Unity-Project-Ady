@@ -1,0 +1,21 @@
+Kisebb áramkimaradások|Nodesc|moral money|-8 -3|s/i
+Dugulás|Eldugult a WC|moral money|-5 1|s/i
+Lassú wi-fi|A Wi-fi ugyan működik, de egyszerűen használhatatlanul lassú. Akkor meg minek van egyátalán?|moral money|-10 5|s/i
+Rongálás|Valami zseni szétverte az egyik zuhanyzót. Adott neki rendesen. Egyesek mikre nem vetemednek...|environment|-5|ok
+Új polgármester|Az időközi választások eredménye: Elsöprő győzelmet aratott a ZSEDIF párt helyi jelöltje, aki gondolkodás nélkül megvágta a kollégium büdzséjét.|money|-10|ok|   jövő héten fele annyi lesz a revenue
+Adomány|Névtelen adományozó egy nagyobb összeggel járult hozzá a megfelelő működéshez.|money|15|ok
+Részleges áramszünet|Több szobában egyátalán nincs áram. A hűtőkben sorra olvadnak ki a kaják, semmit se lehet csinálni áram nélkül.|moral money|-25 10|s/i
+Rossz vízvezeték|Megtört a vízvezeték több helyen is. A mosdók úsznak az undorító toalett vízben.|moral money|-25 20|s/i
+Nincs wi-fi|Lehalt az egész hálózat, rengeteg a felháborodott ember, mert nem tudnak internetezni.|moral money|-20 12|s/i
+Kormányváltás|Az AZSIT párt megalapította az új kormányt Pagyar Méter miniszterelnökkel. Lett működő egészségügy, de a kollégium büdzséjét persze muszály volt megvágnia.|money|-20|ok|   jövő héten nem lesz revenue
+Pályázat|A vezetőség megnyert egy neves pályázatot.|money|30|ok
+Beázás|Beázott a felső szinten a fürdő, több szoba érintett|money moral|-10 -5|s/i
+Áramkimaradás|Egy régi biztosíték miatt elment az áram az egyik szárnyban|money reputation|-8 -3|s/i
+Hangoskodás|Több hallgató panaszkodik az éjszakai zajra|moral reputation|-4 -6|s/i
+Lift meghibásodás|A lift elromlott, az emeletek gyalog közelíthetők meg|money moral|-7 -4|s/i
+Közös konyha koszos|A közös konyhát napok óta nem takarította senki|moral environment|-5 -3|s/i
+Tűzriadó|Egy hibás érzékelő miatt felesleges tűzriadó volt|reputation moral|-4 -5|ok
+Fűtésprobléma|Nem működik megfelelően a fűtés hideg időben|money moral|-9 -6|s/i
+Internethiba|Az internetkapcsolat instabil az egész épületben|money reputation|-6 -4|s/i
+Szemétfelhalmozódás|Nem vitték el időben a szemetet a kollégiumból|environment moral|-5 -4|s/i
+Váratlan ellenőrzés|Hatósági ellenőrzés érkezett előzetes bejelentés nélkül|reputation money|-7 -5|ok

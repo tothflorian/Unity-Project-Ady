@@ -62,8 +62,4 @@ public class TutorialButtonController : MonoBehaviour
         if (CurrentPage == 0)
             previousButton.SetActive(false);
     }
-    public void FinishButtonClick()
-    {
-        GameObject.Find("Tutorial").SetActive(false);
-    }
 }

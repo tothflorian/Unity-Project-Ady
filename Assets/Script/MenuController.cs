@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class MenuController : MonoBehaviour
 {
     public static MenuController Instance { get; private set; }
 
     private string optionsMenuOpenedFrom;
+    private Animator fade;
 
     private void Awake()
     {
@@ -17,38 +19,65 @@ public class MenuController : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        fade = GameObject.Find("FadePanel").GetComponent<Animator>();
+        fade.SetTrigger("Start");
     }
+
     public void SelectGame()
     {
-        SceneManager.LoadScene("GameSelector");
+        StartCoroutine(FadeAndLoad("GameSelector"));
     }
 
     public void StartGame()
     {
-        SceneManager.LoadScene("GameScene");
+        StartCoroutine(FadeAndLoad("GameScene"));
     }
 
     public void OptionsMenu(string sceneName)
     {
-        SceneManager.LoadScene("OptionsMenu");
         optionsMenuOpenedFrom = sceneName;
+        StartCoroutine(FadeAndLoad("OptionsMenu"));
     }
 
     public void Back()
     {
-        SceneManager.LoadScene(optionsMenuOpenedFrom);
+        StartCoroutine(FadeAndLoad(optionsMenuOpenedFrom));
     }
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        StartCoroutine(FadeAndLoad("MainMenu"));
     }
 
     public void QuitGame()
     {
+        fade.SetTrigger("End");
+
         Application.Quit();
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
     }
+
+    private IEnumerator FadeAndLoad(string sceneName)
+    {
+        fade.SetTrigger("End");
+
+        yield return new WaitForSeconds(0.5f);
+
+        SceneManager.LoadScene(sceneName);
+
+        yield return null;
+
+        fade = GameObject.Find("FadePanel").GetComponent<Animator>();
+
+        fade.SetTrigger("Start");
+    }
+
+    public void SetVolume(float newVolume)
+    {
+        GetComponent<AudioSource>().volume = newVolume;
+    }
+
 }

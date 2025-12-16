@@ -2,6 +2,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using TMPro;
 
 public enum Resource
 {
@@ -15,13 +16,18 @@ public enum Response
 
 public class OccurenceManager : MonoBehaviour
 {
-    List<Occurence> _occurenceList;
+    public GameObject title;
+    public GameObject description;
+    public GameObject declineButton;
+    private List<Occurence> _occurenceList;
 
-    void Start()
+    public List<Occurence> OccurenceList { get { return _occurenceList; } }
+
+    void Awake()
     {
         _occurenceList = new List<Occurence>();
 
-        using (StreamReader sr = new StreamReader("adat.txt"))
+        using (StreamReader sr = new StreamReader("Assets/Media/occurences.txt"))
         {
             string line;
 
@@ -54,7 +60,7 @@ public class OccurenceManager : MonoBehaviour
                             case "reputation":
                                 __tempResource.Add( (Resource.Reputation, short.Parse(__tempResValueString[i])) );
                                 break;
-                            case "enviroment":
+                            case "environment":
                                 __tempResource.Add( (Resource.Enviroment, short.Parse(__tempResValueString[i])) );
                                 break;
                             default:
