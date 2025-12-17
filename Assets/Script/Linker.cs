@@ -36,7 +36,8 @@ public class Linker : MonoBehaviour
 
     public void SetVolume()
     {
-        SoundController.Instance.SetVolume(GameObject.Find("Slider").transform.GetComponent<Slider>().value);
+        SoundController.Instance.SetVolume(GameObject.Find("Slider").transform.GetComponent<Slider>().value,
+                                           GameObject.Find("Toggle").GetComponent<Toggle>().isOn);
     }
     public void ClickSound()
     {
@@ -44,6 +45,7 @@ public class Linker : MonoBehaviour
     }
     public void SetMusic()
     {
-        SoundController.Instance.SetMusic();
+        SoundController.Instance.SetMusic(GameObject.Find("Toggle").GetComponent<Toggle>().isOn);
+        Debug.Log("setmusic");
     }
 }

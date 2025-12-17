@@ -8,7 +8,7 @@ public class SoundController : MonoBehaviour
 {
     public static SoundController Instance { get; private set; }
     private AudioSource[] sfx;
-    private AudioSource music;
+    public AudioSource music;
     public float volume;
 
     private void Awake()
@@ -27,16 +27,15 @@ public class SoundController : MonoBehaviour
 
         music.Play();
 
-        SetVolume(volume);
+        SetVolume(volume, true);
     }
 
-    public void SetVolume(float newVolume)
+    public void SetVolume(float newVolume, bool isOn)
     {
         volume = newVolume;
-        foreach(var AS in sfx)
-        {
-            AS.volume = newVolume;
-        }
+        
+        if (isOn) sfx[0].volume = volume;
+        sfx[1].volume = sfx[2].volume = volume;
     }
     public void SetClickSound()
     {
@@ -49,11 +48,11 @@ public class SoundController : MonoBehaviour
     {
         sfx[1].Play();
     }
-    public void SetMusic()
+    public void SetMusic(bool isOn)
     {
-        if(music.isPlaying)
-            music.Stop();
+        if(isOn)
+            music.volume = volume;
         else
-            music.Play();
+            music.volume = 0;
     }
 }

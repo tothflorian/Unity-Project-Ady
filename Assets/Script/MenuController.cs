@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using System;
 
 public class MenuController : MonoBehaviour
 {
@@ -23,7 +24,10 @@ public class MenuController : MonoBehaviour
 
         fade = GameObject.Find("FadePanel").GetComponent<Animator>();
         fade.SetTrigger("Start");
-
+        
+    }
+    void Start()
+    {
         SoundController.Instance.SetClickSound();
     }
 
@@ -41,7 +45,6 @@ public class MenuController : MonoBehaviour
     {
         optionsMenuOpenedFrom = sceneName;
         StartCoroutine(FadeAndLoad("OptionsMenu"));
-        GameObject.Find("Slider").GetComponent<Slider>().value = SoundController.Instance.volume;
     }
 
     public void Back()
@@ -79,17 +82,20 @@ public class MenuController : MonoBehaviour
 
         yield return null;
 
-        fade = GameObject.Find("FadePanel").GetComponent<Animator>();
+        fade = GameObject.Find("FadePanel").GetComponent<Animator>(); 
+
+        try
+        {
+            GameObject.Find("Slider").GetComponent<Slider>().value = SoundController.Instance.volume;
+            GameObject.Find("Toggle").GetComponent<Toggle>().isOn = SoundController.Instance.music.volume !=0 ? true : false;
+            Debug.Log(SoundController.Instance.music.volume);
+        }catch(NullReferenceException)
+        {
+            
+        }
         
         SoundController.Instance.SetClickSound();
 
         fade.SetTrigger("Start");
     }
-
-    private IEnumerator SetSlider()
-    {
-        yield return new WaitForSeconds(0.5f);
-        
-    }
-
 }
