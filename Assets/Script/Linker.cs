@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class MenuControllerLinker : MonoBehaviour
+public class Linker : MonoBehaviour
 {
     public void SelectGame()
     {
@@ -33,8 +34,16 @@ public class MenuControllerLinker : MonoBehaviour
         MenuController.Instance.MainMenu();
     }
 
-    public void SetVolume(float newVolume)
+    public void SetVolume()
     {
-        MenuController.Instance.SetVolume(newVolume);
+        SoundController.Instance.SetVolume(GameObject.Find("Slider").transform.GetComponent<Slider>().value);
+    }
+    public void ClickSound()
+    {
+        SoundController.Instance.ClickSound();
+    }
+    public void SetMusic()
+    {
+        SoundController.Instance.SetMusic();
     }
 }

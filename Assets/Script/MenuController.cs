@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class MenuController : MonoBehaviour
 {
     public static MenuController Instance { get; private set; }
-
     private string optionsMenuOpenedFrom;
     private Animator fade;
 
@@ -22,6 +23,8 @@ public class MenuController : MonoBehaviour
 
         fade = GameObject.Find("FadePanel").GetComponent<Animator>();
         fade.SetTrigger("Start");
+
+        SoundController.Instance.SetClickSound();
     }
 
     public void SelectGame()
@@ -38,6 +41,7 @@ public class MenuController : MonoBehaviour
     {
         optionsMenuOpenedFrom = sceneName;
         StartCoroutine(FadeAndLoad("OptionsMenu"));
+        GameObject.Find("Slider").GetComponent<Slider>().value = SoundController.Instance.volume;
     }
 
     public void Back()
@@ -53,13 +57,18 @@ public class MenuController : MonoBehaviour
     public void QuitGame()
     {
         fade.SetTrigger("End");
+        StartCoroutine(Exit());
+    }
+    private IEnumerator Exit()
+    {
+        yield return new WaitForSeconds(0.5f);
 
         Application.Quit();
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
-    }
 
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+    }
     private IEnumerator FadeAndLoad(string sceneName)
     {
         fade.SetTrigger("End");
@@ -71,13 +80,16 @@ public class MenuController : MonoBehaviour
         yield return null;
 
         fade = GameObject.Find("FadePanel").GetComponent<Animator>();
+        
+        SoundController.Instance.SetClickSound();
 
         fade.SetTrigger("Start");
     }
 
-    public void SetVolume(float newVolume)
+    private IEnumerator SetSlider()
     {
-        GetComponent<AudioSource>().volume = newVolume;
+        yield return new WaitForSeconds(0.5f);
+        
     }
 
 }
