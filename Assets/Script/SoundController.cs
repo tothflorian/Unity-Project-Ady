@@ -1,4 +1,8 @@
 
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -25,9 +29,14 @@ public class SoundController : MonoBehaviour
         sfx = GetComponents<AudioSource>();
         music = sfx[0];
 
-        music.Play();
-
         SetVolume(volume, true);
+        
+        StartCoroutine(StartMusic());
+    }
+    private IEnumerator StartMusic()
+    {
+        yield return null;
+        music.Play();
     }
 
     public void SetVolume(float newVolume, bool isOn)
@@ -44,9 +53,14 @@ public class SoundController : MonoBehaviour
             button.onClick.AddListener(ClickSound);
         }
     }
+
     public void ClickSound()
     {
         sfx[1].Play();
+    }
+    public void UIMove()
+    {
+        sfx[2].Play();
     }
     public void SetMusic(bool isOn)
     {

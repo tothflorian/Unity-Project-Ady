@@ -36,9 +36,13 @@ public class MenuController : MonoBehaviour
         StartCoroutine(FadeAndLoad("GameSelector"));
     }
 
-    public void StartGame()
+    public void StartGame(string path = null)
     {
-        StartCoroutine(FadeAndLoad("GameScene"));
+        StartCoroutine(FadeAndLoad("GameScene", path));
+    }
+    public void GameOver()
+    {
+        StartCoroutine(FadeAndLoad("GameOverScene"));
     }
 
     public void OptionsMenu(string sceneName)
@@ -72,7 +76,7 @@ public class MenuController : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
     }
-    private IEnumerator FadeAndLoad(string sceneName)
+    private IEnumerator FadeAndLoad(string sceneName, string path = null)
     {
         fade.SetTrigger("End");
 
@@ -83,15 +87,19 @@ public class MenuController : MonoBehaviour
         yield return null;
 
         fade = GameObject.Find("FadePanel").GetComponent<Animator>(); 
-
-        try
+        
+        switch (SceneManager.GetActiveScene().name)
         {
-            GameObject.Find("Slider").GetComponent<Slider>().value = SoundController.Instance.volume;
-            GameObject.Find("Toggle").GetComponent<Toggle>().isOn = SoundController.Instance.music.volume !=0 ? true : false;
-            Debug.Log(SoundController.Instance.music.volume);
-        }catch(NullReferenceException)
-        {
-            
+            case "OptionsMenu":
+                GameObject.Find("Slider").GetComponent<Slider>().value = SoundController.Instance.volume;
+                GameObject.Find("Toggle").GetComponent<Toggle>().isOn = SoundController.Instance.music.volume !=0 ? true : false;
+            break;
+            case "GameSelector":
+                SavesController.Instance.Init();
+            break;
+            case "GameScene":
+                GameManager.Instance.BindUI(path);
+            break;
         }
         
         SoundController.Instance.SetClickSound();

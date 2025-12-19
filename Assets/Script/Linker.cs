@@ -33,7 +33,14 @@ public class Linker : MonoBehaviour
     {
         MenuController.Instance.MainMenu();
     }
-
+    public void PassTime()
+    {
+        TimeManager.Instance.PassTime();
+    }
+    public void Save()
+    {
+        SavesController.Instance.Save();
+    }
     public void SetVolume()
     {
         SoundController.Instance.SetVolume(GameObject.Find("Slider").transform.GetComponent<Slider>().value,
@@ -46,6 +53,5 @@ public class Linker : MonoBehaviour
     public void SetMusic()
     {
         SoundController.Instance.SetMusic(GameObject.Find("Toggle").GetComponent<Toggle>().isOn);
-        Debug.Log("setmusic");
     }
 }

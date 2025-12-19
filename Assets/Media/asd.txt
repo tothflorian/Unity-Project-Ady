@@ -1,0 +1,4 @@
+4
+30 40 60 60
+titleTeszt2|Ignore|2|money
+titleTeszt1|Solve|1|environment

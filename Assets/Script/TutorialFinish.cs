@@ -17,6 +17,7 @@ public class TutorialFinish : MonoBehaviour
     {
         background.SetTrigger("Start");
         window.SetTrigger("Start");
+        GameManager.Instance.newGame = false;
         
         StartCoroutine(DisableAfterAnimation(0.5f));
     }
